@@ -20,6 +20,11 @@ class CoursesController < ApplicationController
     end
   end
 
+  def fetch_courses_with_tutors
+    courses = Course.all
+    render json: courses, each_serializer: CourseSerializer, include: '**.tutors', status: :ok
+  end
+
   private
 
   def validate_params(params)
