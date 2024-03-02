@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  Rails.application.routes.draw do
+    # writing custom route in order to have readable url
+    post '/course/create', to: 'courses#create_with_tutors'
+  end
 end
