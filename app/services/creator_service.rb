@@ -24,7 +24,7 @@ class CreatorService
   def create_course
     course = Course.find_by(name: @params[:course_name])
     if course.present?
-      raise StandardError, "Course with name `#{course.name}` already exists"
+      raise StandardError, "Course with name #{course.name} already exists"
     else
       Course.create(name: @params[:course_name])
     end
@@ -34,7 +34,7 @@ class CreatorService
     @params[:tutors].map do |tutor_params|
       tutor = Tutor.find_by(name: tutor_params[:name])
       if tutor.present?
-        raise StandardError, "Tutor with name `#{tutor.name}` already exists"
+        raise StandardError, "Tutor with name #{tutor.name} already exists"
       else
         course.tutors.create(tutor_params)
       end
