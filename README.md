@@ -12,8 +12,16 @@ Write:
 
 ## Solution
 
-DB Diagram:
-* https://dbdiagram.io/d/65e37279cd45b569fb5d9200
+DB Diagram: https://dbdiagram.io/d/65e37279cd45b569fb5d9200
 
-Notion Document for API Contract
-* https://www.notion.so/API-Contract-dc9472a5b25247159f067847d8ccd169?pvs=4
+Notion Document for API Contract  
+https://www.notion.so/API-Contract-dc9472a5b25247159f067847d8ccd169?pvs=4
+
+Command to run the application:
+- `rails db:create`
+- `rails db:migrate`
+- `rails s`
+
+Command to run the tests:
+- `rails db:create RAILS_ENV=test`
+- `bundle exec rspec`
