@@ -27,10 +27,13 @@ gem "bootsnap", require: false
 
 gem 'dry-schema'
 gem 'active_model_serializers'
+gem 'factory_bot_rails'
+gem 'faker'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'byebug'
+  gem 'rspec-rails', '~> 5.0.0'
 end
 
 group :development do
